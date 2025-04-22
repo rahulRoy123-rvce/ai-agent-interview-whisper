@@ -1,8 +1,8 @@
-
 "use client";
 
 import React from "react";
 import { FadeIn, AnimatedText } from "./motion";
+import src1 from "../../../public/IMG_3048[1].png"
 
 export const HeroSection = () => {
   const [isMounted, setIsMounted] = React.useState(false);
@@ -65,7 +65,7 @@ export const HeroSection = () => {
               <div className="relative z-10 h-full w-full bg-deepPurple/30 backdrop-blur-sm rounded-2xl border border-white/10 shadow-xl p-6 flex flex-col">
                 <div className="flex justify-between items-center">
                   <img 
-                    src="/IMG_3048[1].png" 
+                    src={src1}
                     alt="GoBot Logo" 
                     className="h-12 w-auto"
                   />
