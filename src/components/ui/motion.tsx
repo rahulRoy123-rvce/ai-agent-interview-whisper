@@ -1,143 +1,164 @@
 
 "use client";
 
-import React from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "framer-motion";
-
-export const MotionDiv = motion.div;
-export const MotionPath = motion.path;
-export const MotionSvg = motion.svg;
-
-export function useScrollTransform(
-  scrollYProgress: MotionValue<number>,
-  inputRange: number[],
-  outputRange: string[] | number[]
-) {
-  return useTransform(scrollYProgress, inputRange, outputRange as any);
-}
-
-export function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
-export function useSmoothTransform(
-  value: MotionValue<number>,
-  damping: number = 50,
-  stiffness: number = 400
-) {
-  return useSpring(value, {
-    damping,
-    stiffness,
-  });
-}
+import React, { ReactNode, useEffect, useRef } from "react";
+import { motion, useInView, useAnimation, Variants } from "framer-motion";
 
 export const AnimatedText = ({
   text,
   className,
+  once = true,
 }: {
   text: string;
   className?: string;
+  once?: boolean;
 }) => {
-  const letters = Array.from(text);
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once });
 
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
-    }),
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, isInView]);
+
+  const wordAnimation = {
+    hidden: {},
+    visible: {},
   };
 
-  const child = {
+  const characterAnimation = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
+        duration: 0.6,
+        ease: [0.2, 0.65, 0.3, 0.9],
       },
     },
   };
 
   return (
-    <motion.div
-      className={className}
-      variants={container}
-      initial="hidden"
-      animate="visible"
-    >
-      {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
-      ))}
-    </motion.div>
+    <span className={className}>
+      <motion.span
+        ref={ref}
+        aria-hidden="true"
+        initial="hidden"
+        animate={controls}
+        variants={wordAnimation}
+        transition={{
+          delayChildren: 0.1,
+          staggerChildren: 0.04,
+        }}
+        className="inline-block"
+        style={{ position: "relative" }}
+      >
+        {text.split(" ").map((word, index) => {
+          return (
+            <span key={index} className="inline-block">
+              {word.split("").map((char, charIndex) => {
+                return (
+                  <motion.span
+                    key={charIndex}
+                    variants={characterAnimation}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                );
+              })}
+              {index !== text.split(" ").length - 1 && (
+                <motion.span variants={characterAnimation} className="inline-block">
+                  &nbsp;
+                </motion.span>
+              )}
+            </span>
+          );
+        })}
+      </motion.span>
+    </span>
   );
+};
+
+type FadeInProps = {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  direction?: "up" | "down" | "left" | "right";
+  duration?: number;
+  once?: boolean;
 };
 
 export const FadeIn = ({
   children,
-  delay = 0,
-  direction = null,
   className = "",
-  fullWidth = false,
-  ...props
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  direction?: "up" | "down" | "left" | "right" | null;
-  className?: string;
-  fullWidth?: boolean;
-  [key: string]: any;
-}) => {
-  let translateX = 0;
-  let translateY = 0;
+  delay = 0,
+  direction = "up",
+  duration = 0.5,
+  once = true,
+}: FadeInProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once });
+  const controls = useAnimation();
 
-  if (direction === "up") {
-    translateY = 20;
-  } else if (direction === "down") {
-    translateY = -20;
-  } else if (direction === "left") {
-    translateX = 20;
-  } else if (direction === "right") {
-    translateX = -20;
-  }
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else if (!once) {
+      controls.start("hidden");
+    }
+  }, [controls, inView, once]);
+
+  const getVariants = () => {
+    const variants: Variants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          duration,
+          delay,
+          ease: [0.25, 0.1, 0.25, 1.0],
+        },
+      },
+    };
+
+    switch (direction) {
+      case "up":
+        variants.hidden = { ...variants.hidden, y: 40 };
+        variants.visible = { ...variants.visible, y: 0 };
+        break;
+      case "down":
+        variants.hidden = { ...variants.hidden, y: -40 };
+        variants.visible = { ...variants.visible, y: 0 };
+        break;
+      case "left":
+        variants.hidden = { ...variants.hidden, x: 40 };
+        variants.visible = { ...variants.visible, x: 0 };
+        break;
+      case "right":
+        variants.hidden = { ...variants.hidden, x: -40 };
+        variants.visible = { ...variants.visible, x: 0 };
+        break;
+    }
+
+    return variants;
+  };
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        x: translateX,
-        y: translateY,
-      }}
-      animate={{
-        opacity: 1,
-        x: 0,
-        y: 0,
-      }}
-      transition={{
-        delay: delay,
-        duration: 0.6,
-        ease: [0.215, 0.61, 0.355, 1],
-      }}
-      className={`${className} ${fullWidth ? "w-full" : ""}`}
-      {...props}
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={getVariants()}
+      className={className}
+      style={{ position: "relative" }}
     >
       {children}
     </motion.div>
