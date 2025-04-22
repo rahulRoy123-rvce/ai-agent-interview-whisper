@@ -65,7 +65,7 @@ export const HeroSection = () => {
               <div className="relative z-10 h-full w-full bg-deepPurple/30 backdrop-blur-sm rounded-2xl border border-white/10 shadow-xl p-6 flex flex-col">
                 <div className="flex justify-between items-center">
                   <img 
-                    src="../../../public/IMG_3048[1].png" 
+                    src="/IMG_3048[1].png" 
                     alt="GoBot Logo" 
                     className="h-12 w-auto"
                   />
