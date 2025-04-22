@@ -62,7 +62,7 @@ export const HeroSection = () => {
           <FadeIn delay={0.5} direction="left">
             <div className="relative h-[400px] w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-skyBlue via-boldPurple to-softYellow opacity-20 blur-3xl rounded-full animate-pulse-slow"></div>
-              <div className="relative z-10 h-full w-full bg-deepPurple/30 backdrop-blur-sm rounded-2xl border border-white/10 shadow-xl p-6 flex flex-col justify-between">
+              <div className="relative z-10 h-full w-full bg-deepPurple/30 backdrop-blur-sm rounded-2xl border border-white/10 shadow-xl p-6 flex flex-col">
                 <div className="flex justify-between items-center">
                   <img 
                     src="/gobot-logo.png" 
@@ -76,7 +76,7 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="mt-4 space-y-4 flex-1">
+                <div className="mt-4 space-y-4 flex-1 overflow-y-auto">
                   <div className="bg-deepPurple/70 p-3 rounded-lg rounded-bl-none max-w-[80%]">
                     <p className="text-white">Tell me about a challenging project you worked on.</p>
                   </div>
@@ -90,8 +90,8 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 
-                {/* Fixed chat input container */}
-                <div className="mt-4 w-full">
+                {/* Chat input container with fixed width */}
+                <div className="mt-4 w-full self-end">
                   <div className="relative w-full">
                     <input 
                       type="text" 

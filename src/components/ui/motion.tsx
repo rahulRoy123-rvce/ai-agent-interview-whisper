@@ -158,7 +158,7 @@ export const FadeIn = ({
       animate={controls}
       variants={getVariants()}
       className={className}
-      style={{ position: "relative", width: "100%" }}
+      style={{ position: "relative", width: "100%", maxWidth: "100%", overflow: "hidden" }}
     >
       {children}
     </motion.div>
