@@ -10,7 +10,7 @@ import { MobileMenu } from "@/components/mobile-menu";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-deepPurple/90">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-black/90 to-black">
       {/* Background effects */}
       <GridBackgroundDemo />
       
