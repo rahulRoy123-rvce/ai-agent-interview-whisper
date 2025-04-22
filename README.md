@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
 
-## Project info
+# GoBot - AI Interview Assistant
 
-**URL**: https://lovable.dev/projects/820c55f0-500f-4c53-b145-d373089b5e93
+A modern, dark-themed landing page for GoBot, an AI-powered interview assistant that helps candidates prepare for interviews with realistic simulations and personalized feedback.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Modern Design**: Dark theme with custom color scheme
+- **Responsive Layout**: Works on all device sizes
+- **Interactive UI**: Smooth animations and transitions
+- **Aceternity UI Components**: Advanced UI effects including:
+  - Grid & Dot Background
+  - Container Scroll Animation
+  - Hero Section
+  - Bento Grid
 
-**Use Lovable**
+## Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/820c55f0-500f-4c53-b145-d373089b5e93) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- Framer Motion
 
-## How can I deploy this project?
+## Color Scheme
 
-Simply open [Lovable](https://lovable.dev/projects/820c55f0-500f-4c53-b145-d373089b5e93) and click on Share -> Publish.
+- **Primary Color**: Sky Blue - #6CC3D5
+- **Primary Text Color**: Deep Purple - #3D2E4F 
+- **Secondary Color**: Soft Yellow - #F5C87A
+- **Secondary Text Color**: Muted Violet - #A28DDA
+- **Accent Color**: Bold Purple - #7A5AA3
+- **Positive (Success)**: Fresh Mint Green - #4FC88F
+- **Negative (Error)**: Warm Coral Red - #E2574C
 
-## Can I connect a custom domain to my Lovable project?
+## Sections
 
-Yes, you can!
+1. **Hero Section**: Engaging introduction with animated text and a floating chat interface
+2. **Features Section**: Highlights key features with scrolling animation
+3. **How It Works**: Demonstrates the interview process with visual elements
+4. **Pricing/Features Grid**: Showcases service options in a bento grid layout
+5. **Call to Action**: Encourages users to get started
+6. **Footer**: Contact information and important links
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Getting Started
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Run the development server with `npm run dev`
+4. Visit `http://localhost:8080` to view the landing page

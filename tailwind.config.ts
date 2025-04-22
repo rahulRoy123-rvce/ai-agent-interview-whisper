@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom color scheme
+				skyBlue: '#6CC3D5',
+				deepPurple: '#3D2E4F',
+				softYellow: '#F5C87A',
+				mutedViolet: '#A28DDA',
+				boldPurple: '#7A5AA3',
+				mintGreen: '#4FC88F',
+				coralRed: '#E2574C',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
