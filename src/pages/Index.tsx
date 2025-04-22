@@ -6,6 +6,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { Footer } from "@/components/ui/footer";
 import { AnimatedText, FadeIn } from "@/components/ui/motion";
 import { MobileMenu } from "@/components/mobile-menu";
+import src2 from "../../public/IMG_3048[1].png"
 
 const Index = () => {
   return (
@@ -18,7 +19,7 @@ const Index = () => {
         <div className="container mx-auto px-4 overflow-visible">
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center space-x-2">
-              <img src="../../public/IMG_3048[1].png" alt="GoBot Logo" className="h-24 w-auto object-contain" />
+              <img src={src2} alt="GoBot Logo" className="h-24 w-auto object-contain" />
             </a>
             
             <div className="hidden md:flex items-center space-x-10">
