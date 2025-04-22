@@ -90,28 +90,31 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="mt-4 relative">
-                  <input 
-                    type="text" 
-                    placeholder="Type your response..." 
-                    className="w-full bg-deepPurple/50 border border-white/10 rounded-lg py-2 px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-skyBlue"
-                  />
-                  <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-skyBlue rounded-md">
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="16" 
-                      height="16" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      className="text-deepPurple"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </button>
+                {/* Fixed chat input container */}
+                <div className="mt-4 w-full">
+                  <div className="relative w-full">
+                    <input 
+                      type="text" 
+                      placeholder="Type your response..." 
+                      className="w-full bg-deepPurple/50 border border-white/10 rounded-lg py-2 px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-skyBlue pr-10"
+                    />
+                    <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-skyBlue rounded-md">
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        className="text-deepPurple"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
