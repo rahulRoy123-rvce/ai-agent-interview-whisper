@@ -65,7 +65,7 @@ export const HeroSection = () => {
               <div className="relative z-10 h-full w-full bg-deepPurple/30 backdrop-blur-sm rounded-2xl border border-white/10 shadow-xl p-6 flex flex-col">
                 <div className="flex justify-between items-center">
                   <img 
-                    src="/gobot-logo.png" 
+                    src="../../../public/IMG_3048[1].png" 
                     alt="GoBot Logo" 
                     className="h-12 w-auto"
                   />
@@ -78,11 +78,11 @@ export const HeroSection = () => {
                 
                 <div className="mt-4 space-y-4 flex-1 overflow-y-auto">
                   <div className="bg-deepPurple/70 p-3 rounded-lg rounded-bl-none max-w-[80%]">
-                    <p className="text-white">Tell me about a challenging project you worked on.</p>
+                    <p className="text-white">Tell me about a project you worked on.</p>
                   </div>
                   
                   <div className="bg-skyBlue/20 p-3 rounded-lg rounded-br-none ml-auto max-w-[80%]">
-                    <p className="text-white">In my previous role, I led a team that redesigned our company's database architecture...</p>
+                    <p className="text-white">In my previous role, I led a team that designed the database architecture...</p>
                   </div>
                   
                   <div className="bg-deepPurple/70 p-3 rounded-lg rounded-bl-none max-w-[80%]">

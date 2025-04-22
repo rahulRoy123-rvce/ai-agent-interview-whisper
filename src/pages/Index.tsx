@@ -1,4 +1,3 @@
-
 import React from "react";
 import { GridBackgroundDemo } from "@/components/ui/grid-background";
 import { ContainerScroll, ContainerScrollText, ContainerScrollImage } from "@/components/ui/container-scroll";
@@ -10,16 +9,16 @@ import { MobileMenu } from "@/components/mobile-menu";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-black/90 to-black">
+    <div className="min-h-screen relative overflow-hidden bg-black">
       {/* Background effects */}
       <GridBackgroundDemo />
       
       {/* Navigation */}
-      <nav className="relative z-50 py-5">
-        <div className="container mx-auto px-4">
+      <nav className="relative z-50 py-4">
+        <div className="container mx-auto px-4 overflow-visible">
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center space-x-2">
-              <img src="/gobot-logo.png" alt="GoBot Logo" className="h-10 w-auto" />
+              <img src="../../public/IMG_3048[1].png" alt="GoBot Logo" className="h-24 w-auto object-contain" />
             </a>
             
             <div className="hidden md:flex items-center space-x-10">
@@ -55,7 +54,7 @@ const Index = () => {
             </div>
           }
         >
-          <div className="relative flex flex-col items-center w-full">
+          <div className="relative flex flex-col items-center w-full max-w-5xl mx-auto px-4">
             <ContainerScrollText>
               <FadeIn delay={0.2} direction="up">
                 <div className="flex flex-col items-center justify-center h-full p-6 md:p-10 rounded-2xl bg-deepPurple/30 backdrop-blur-sm border border-skyBlue/20 mb-16">

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -80,7 +79,7 @@ export const GridBackgroundDemo = () => {
         {typeof window !== "undefined" && <GridPattern />}
       </motion.div>
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-deepPurple/20 via-deepPurple/40 to-deepPurple/80"></div>
+      <div className="absolute inset-0 bg-black"></div>
     </div>
   );
 };

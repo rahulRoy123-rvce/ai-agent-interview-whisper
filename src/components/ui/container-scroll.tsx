@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useRef } from "react";
@@ -22,12 +21,12 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="relative h-[140vh] flex items-start justify-center overflow-hidden bg-transparent"
+      className="relative h-auto min-h-screen py-8 flex items-start justify-center overflow-visible bg-transparent"
       ref={containerRef}
     >
       <motion.div
         style={{ scale, y }}
-        className="relative flex flex-col items-center pt-20 md:pt-32"
+        className="relative flex flex-col items-center pt-8 md:pt-12 w-full"
       >
         <div className="text-center mb-10 px-4">{titleComponent}</div>
         <div className="relative">
@@ -48,7 +47,7 @@ export const ContainerScrollText = ({ children }: { children: React.ReactNode })
 
 export const ContainerScrollImage = ({ src, alt }: { src: string; alt: string }) => {
   return (
-    <div className="relative mt-10 p-4 z-10">
+    <div className="relative mt-10 p-4 z-10 max-w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +59,7 @@ export const ContainerScrollImage = ({ src, alt }: { src: string; alt: string })
           alt={alt} 
           width={800} 
           height={600} 
-          className="w-full h-auto" 
+          className="w-full h-auto max-h-[500px] object-cover" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-deepPurple/30 to-transparent"></div>
       </motion.div>
