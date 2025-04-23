@@ -78,8 +78,8 @@ export const GridBackgroundDemo = () => {
       >
         {typeof window !== "undefined" && <GridPattern />}
       </motion.div>
-      {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-black"></div>
+      {/* Solid white background */}
+      <div className="absolute inset-0 bg-white"></div>
     </div>
   );
 };

@@ -3,53 +3,53 @@
 @tailwind utilities;
 
 @layer base {
-  /* Using dark theme by default with custom colors */
+  /* Using light theme by default with custom colors */
   :root {
-    --background: 240 5% 10%; /* Dark background (almost black) */
-    --foreground: 210 40% 98%; /* Light text */ 
+    --background: 0 0% 100%; /* White background */
+    --foreground: 240 10% 10%; /* Dark text */ 
 
-    --card: 240 5% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
 
-    --popover: 240 5% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
 
     /* Primary: Sky Blue */
     --primary: 190 55% 63%; /* #6CC3D5 */
-    --primary-foreground: 240 26% 25%; /* #3D2E4F */
+    --primary-foreground: 0 0% 100%;
 
     /* Secondary: Soft Yellow */
     --secondary: 39 86% 72%; /* #F5C87A */
-    --secondary-foreground: 240 5% 10%;
+    --secondary-foreground: 240 10% 10%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 35% 71%; /* Muted Violet #A28DDA */ 
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 5% 50%;
 
     /* Accent: Bold Purple */
     --accent: 266 28% 50%; /* #7A5AA3 */
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 0 0% 100%;
 
     /* Error: Coral Red */
     --destructive: 5 75% 59%; /* #E2574C */
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5% 15%;
-    --input: 240 5% 15%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 266 28% 50%; /* Bold Purple as ring */
 
     --radius: 0.5rem;
 
     /* Success: Mint Green */
     --success: 153 52% 55%; /* #4FC88F */
-    --success-foreground: 210 40% 98%;
+    --success-foreground: 0 0% 100%;
 
-    --sidebar-background: 240 5% 12%;
-    --sidebar-foreground: 210 40% 98%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 10%;
     --sidebar-primary: 190 55% 63%; /* Sky Blue */
-    --sidebar-primary-foreground: 240 26% 25%; /* Deep Purple */
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 266 28% 50%; /* Bold Purple */
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 90%;
     --sidebar-ring: 190 55% 63%; /* Sky Blue */
   }
 }

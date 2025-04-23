@@ -10,10 +10,10 @@ import { useEffect } from "react";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Set dark mode on body
+  // Set light mode on body
   useEffect(() => {
-    document.documentElement.classList.add('dark');
-    document.body.style.backgroundColor = '#1a1a2e'; // Deep purple background
+    document.documentElement.classList.remove('dark');
+    document.body.style.backgroundColor = '#ffffff'; // White background
   }, []);
   
   return (
