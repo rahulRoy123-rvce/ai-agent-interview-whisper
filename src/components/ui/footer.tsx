@@ -1,75 +1,64 @@
 import React from "react";
 import { FadeIn } from "./motion";
+import src3 from "../../../public/IMG_3048[1].png"
 
 export const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 py-12">
       <div className="container mx-auto px-4">
         <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-1">
-              <img 
-                src="/gobot-logo.png" 
-                alt="GoBot Logo" 
-                className="h-14 w-auto mb-4" 
-              />
-              <p className="text-gray-600 text-sm mt-4 max-w-xs">
-                The AI-powered interview assistant that helps you prepare for your next big opportunity.
-              </p>
-              <div className="flex space-x-4 mt-6">
-                {["facebook", "twitter", "instagram", "linkedin"].map((social) => (
-                  <a 
-                    key={social}
-                    href="#" 
-                    className="text-gray-500 hover:text-skyBlue transition-colors"
-                  >
-                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 border border-gray-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                      </svg>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+          <div className="flex flex-col items-center justify-center">
+            <img 
+              src={src3} 
+              alt="GoBot Logo" 
+              className="h-36 w-auto mb-4" 
+            />
+            <p className="text-gray-600 text-sm mt-4 max-w-md text-center">
+              The AI-powered interview assistant that helps you prepare for your next big opportunity.
+            </p>
             
-            <div>
-              <h4 className="text-gray-800 font-medium mb-4">Product</h4>
-              <ul className="space-y-2">
-                {["Features", "Pricing", "Use Cases", "Testimonials"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-600 hover:text-skyBlue text-sm transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-gray-800 font-medium mb-4">Company</h4>
-              <ul className="space-y-2">
-                {["About", "Blog", "Careers", "Contact"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-600 hover:text-skyBlue text-sm transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-gray-800 font-medium mb-4">Legal</h4>
-              <ul className="space-y-2">
-                {["Terms", "Privacy", "Cookies", "Licenses"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-600 hover:text-skyBlue text-sm transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <div className="flex space-x-6 mt-8">
+              <a 
+                href="#" 
+                aria-label="LinkedIn"
+                className="text-gray-500 hover:text-skyBlue transition-colors"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 border border-gray-200 hover:bg-gradient-to-br from-skyBlue/20 to-boldPurple/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+              </a>
+              
+              <a 
+                href="#" 
+                aria-label="Twitter"
+                className="text-gray-500 hover:text-skyBlue transition-colors"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 border border-gray-200 hover:bg-gradient-to-br from-skyBlue/20 to-boldPurple/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                  </svg>
+                </div>
+              </a>
+              
+              <a 
+                href="#" 
+                aria-label="Discord"
+                className="text-gray-500 hover:text-skyBlue transition-colors"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 border border-gray-200 hover:bg-gradient-to-br from-skyBlue/20 to-boldPurple/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 8.5a3 3 0 0 0-2.83-2.83l-.12-.01a3.05 3.05 0 0 0-2.83 2.83"></path>
+                    <path d="M10.29 4.72a10 10 0 0 0-8.48 10.07 10 10 0 0 0 8.48 10.07"></path>
+                    <path d="M13.71 4.72a10 10 0 0 1 8.48 10.07 10 10 0 0 1-8.48 10.07"></path>
+                    <path d="M8.5 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                    <path d="M15.5 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
           
@@ -77,17 +66,9 @@ export const Footer = () => {
             <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} GoBot. All rights reserved.
             </p>
-            <div className="mt-4 md:mt-0">
-              <ul className="flex space-x-6">
-                {["Terms", "Privacy", "Cookies"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-500 hover:text-skyBlue text-sm transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <p className="text-gray-500 text-sm mt-2 md:mt-0">
+              Powered by <a href="#" className="font-medium text-boldPurple hover:text-skyBlue transition-colors">Banyan Intelligence</a>
+            </p>
           </div>
         </FadeIn>
       </div>
