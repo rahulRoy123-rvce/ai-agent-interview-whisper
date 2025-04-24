@@ -6,36 +6,41 @@
   /* Using light theme by default with custom colors */
   :root {
     --background: 0 0% 100%; /* White background */
-    --foreground: 240 10% 10%; /* Dark text */ 
+    --foreground: 267 25% 25%; /* #3D2E4F Deep Purple Shadow */
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 267 25% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 267 25% 25%;
 
-    /* Primary: Sky Blue */
-    --primary: 190 55% 63%; /* #6CC3D5 */
-    --primary-foreground: 0 0% 100%;
+    /* Primary Colors */
+    --primary: 191 53% 63%; /* #6CC3D5 Sky Blue */
+    --primary-foreground: 267 25% 25%; /* #3D2E4F Deep Purple Shadow */
 
-    /* Secondary: Soft Yellow */
-    --secondary: 39 86% 72%; /* #F5C87A */
-    --secondary-foreground: 240 10% 10%;
+    /* Secondary Colors */
+    --secondary: 39 86% 72%; /* #F5C87A Soft Yellow */
+    --secondary-foreground: 255 53% 85%; /* #A28DDA Muted Violet */
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 240 5% 50%;
+    /* Muted Colors */
+    --muted: 255 53% 85%; /* #A28DDA Muted Violet */
+    --muted-foreground: 267 25% 25%; /* #3D2E4F Deep Purple Shadow */
 
-    /* Accent: Bold Purple */
-    --accent: 266 28% 50%; /* #7A5AA3 */
+    /* Accent Colors */
+    --accent: 267 29% 50%; /* #7A5AA3 Bold Purple */
     --accent-foreground: 0 0% 100%;
 
-    /* Error: Coral Red */
-    --destructive: 5 75% 59%; /* #E2574C */
+    /* Status Colors */
+    --destructive: 5 71% 59%; /* #E2574C Warm Coral Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 266 28% 50%; /* Bold Purple as ring */
+    --success: 153 52% 55%; /* #4FC88F Fresh Mint Green */
+    --success-foreground: 0 0% 100%;
+
+    /* Border and Input */
+    --border: 267 25% 25%;
+    --input: 267 25% 25%;
+    --ring: 267 29% 50%;
 
     --radius: 0.5rem;
 
@@ -56,12 +61,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border/50;
   }
 
   body {
-    @apply bg-background text-foreground;
-    @apply overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
   
   /* Custom animations for aceternity UI */
@@ -82,6 +86,22 @@
     100% { background-position: 0% 50%; }
   }
   
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+}
+
+@layer components {
+  /* Custom animations for aceternity UI */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
