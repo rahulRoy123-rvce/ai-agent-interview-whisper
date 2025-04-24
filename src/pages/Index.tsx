@@ -74,7 +74,7 @@ const Index = () => {
               />
               <FadeIn delay={0.4}>
                 <p className="text-gray-600 mt-6 text-xl">
-                  Ditch boring forms. GoBot is your AI-powered interviewer that chats with your users—over WhatsApp, email, or web—capturing feedback that feels human.
+                  Ditch boring forms. GoBot is your AI-powered interviewer that chats with your users over WhatsApp, email, or web capturing feedback that feels human.
                 </p>
               </FadeIn>
             </div>
@@ -92,7 +92,7 @@ const Index = () => {
                   <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
                       <FadeIn delay={0.1}>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-gray-800">How It Works</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-gray-800">How It Works?</h2>
                       </FadeIn>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                         <FadeIn delay={0.2} direction="up">
