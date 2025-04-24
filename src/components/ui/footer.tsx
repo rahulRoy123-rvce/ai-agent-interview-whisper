@@ -8,14 +8,8 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <FadeIn>
           <div className="flex flex-col items-center justify-center">
-            <img 
-              src={src3} 
-              alt="GoBot Logo" 
-              className="h-36 w-auto mb-4" 
-            />
-            <p className="text-gray-600 text-sm mt-4 max-w-md text-center">
-              The AI-powered interview assistant that helps you prepare for your next big opportunity.
-            </p>
+            
+          
             
             <div className="flex space-x-6 mt-8">
               <a 

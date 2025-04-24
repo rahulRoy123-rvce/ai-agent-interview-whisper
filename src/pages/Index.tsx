@@ -80,139 +80,8 @@ const Index = () => {
             </div>
           </section>
 
-          {/* Section 2: AI-Powered Interview Agent */}
-          <section className="relative py-20">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left Column */}
-                <div className="space-y-8">
-                  <div className="space-y-4">
-                    <h1 className="text-6xl font-bold">
-                      <span className="text-skyBlue">AI-Powered</span>
-                      <br />
-                      <span className="text-deepPurple">Interview Agent</span>
-                    </h1>
-                    <p className="text-xl text-gray-600 max-w-xl">
-                      Our cutting-edge AI helps candidates prepare for interviews with realistic scenarios and personalized feedback.
-                    </p>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-4">
-                    <button className="px-8 py-3 bg-gradient-to-r from-skyBlue to-boldPurple text-white font-medium rounded-lg hover:opacity-90 transition-all shadow-md">
-                      Get Started
-                    </button>
-                    <button className="px-8 py-3 bg-white border border-gray-200 text-deepPurple font-medium rounded-lg hover:bg-gray-50 transition-all">
-                      Watch Demo
-                    </button>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <div className="flex -space-x-2">
-                      {[...Array(4)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-8 h-8 rounded-full bg-skyBlue/20"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-gray-600 ml-2">
-                      Join 10,000+ users preparing for interviews
-                    </p>
-                  </div>
-                </div>
-
-                {/* Right Column - Chat Interface */}
-                <div className="relative">
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                    {/* Chat Header */}
-                    <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                      <div className="flex items-center gap-2">
-                        <img src={src2} alt="GoBot Logo" className="h-6 w-auto" />
-                      </div>
-                      <div className="flex gap-1">
-                        <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                      </div>
-                    </div>
-
-                    {/* Chat Messages */}
-                    <div className="p-6 space-y-4">
-                      <div className="bg-gray-100 rounded-lg p-4 max-w-[80%]">
-                        <p className="text-gray-700">Tell me about a project you worked on.</p>
-                      </div>
-                      
-                      <div className="bg-gradient-to-r from-skyBlue/20 to-boldPurple/20 rounded-lg p-4 max-w-[80%] ml-auto">
-                        <p className="text-gray-700">In my previous role, I led a team that designed the database architecture...</p>
-                      </div>
-
-                      <div className="bg-gray-100 rounded-lg p-4 max-w-[80%]">
-                        <p className="text-gray-700">How did you handle the challenges that arose?</p>
-                      </div>
-                    </div>
-
-                    {/* Chat Input */}
-                    <div className="p-4 border-t border-gray-100">
-                      <div className="flex gap-2">
-                        <input
-                          type="text"
-                          placeholder="Type your response..."
-                          className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-skyBlue/50"
-                        />
-                        <button className="p-2 bg-gradient-to-r from-skyBlue to-boldPurple text-white rounded-lg hover:opacity-90 transition-all">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M22 2L11 13"></path>
-                            <path d="M22 2L15 22L11 13L2 9L22 2z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Why GoBot Section */}
-          <section className="py-20 relative">
-            <div className="container mx-auto px-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-center text-deepPurple mb-16">Why GoBot?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                {/* Card 1: Feels Human */}
-                <div className="group">
-                  <div className="h-full bg-gradient-to-br from-skyBlue to-boldPurple p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2">
-                    <h3 className="text-xl font-bold text-white mb-4">Feels Human</h3>
-                    <p className="text-white/90">Conversations that sound real—so users actually respond.</p>
-                  </div>
-                </div>
-
-                {/* Card 2: Multi-Modal Feedback */}
-                <div className="group">
-                  <div className="h-full bg-gradient-to-br from-softYellow to-skyBlue p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2">
-                    <h3 className="text-xl font-bold text-white mb-4">Multi-Modal Feedback</h3>
-                    <p className="text-white/90">Capture both words and emotion with voice notes.</p>
-                  </div>
-                </div>
-
-                {/* Card 3: Insights, Not Spreadsheets */}
-                <div className="group">
-                  <div className="h-full bg-gradient-to-br from-mutedViolet to-mintGreen p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2">
-                    <h3 className="text-xl font-bold text-white mb-4">Insights, Not Spreadsheets</h3>
-                    <p className="text-white/90">Themes, summaries, quotes—automatically delivered.</p>
-                  </div>
-                </div>
-
-                {/* Card 4: Frictionless Experience */}
-                <div className="group">
-                  <div className="h-full bg-gradient-to-br from-boldPurple to-coralRed p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2">
-                    <h3 className="text-xl font-bold text-white mb-4">Frictionless Experience</h3>
-                    <p className="text-white/90">No forms. No dashboards. Just chats.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
+          
+          
           {/* Section 1: Container Scroll Animation */}
           <section id="how-it-works">
             
@@ -286,6 +155,60 @@ const Index = () => {
             
           </section>
 
+          {/* Why GoBot Section */}
+          <section className="py-20 relative">
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-16" style={{ color: 'rgb(62, 47, 80)' }}>Why GoBot?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                {/* Card 1: Feels Human */}
+                <div className="group">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2" 
+                    style={{ 
+                      background: 'linear-gradient(to bottom right, rgb(108, 196, 213), rgb(123, 91, 164))'
+                    }}>
+                    <h3 className="text-xl font-bold text-white mb-4">Feels Human</h3>
+                    <p className="text-white/90">Conversations that sound real—so users actually respond.</p>
+                  </div>
+                </div>
+
+                {/* Card 2: Multi-Modal Feedback */}
+                <div className="group">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2"
+                    style={{ 
+                      background: 'linear-gradient(to bottom right, rgb(245, 200, 122), rgb(108, 196, 213))'
+                    }}>
+                    <h3 className="text-xl font-bold text-white mb-4">Multi-Modal Feedback</h3>
+                    <p className="text-white/90">Capture both words and emotion with voice notes.</p>
+                  </div>
+                </div>
+
+                {/* Card 3: Insights, Not Spreadsheets */}
+                <div className="group">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2"
+                    style={{ 
+                      background: 'linear-gradient(to bottom right, rgb(123, 91, 164), rgb(245, 200, 122))'
+                    }}>
+                    <h3 className="text-xl font-bold text-white mb-4">Insights, Not Spreadsheets</h3>
+                    <p className="text-white/90">Themes, summaries, quotes—automatically delivered.</p>
+                  </div>
+                </div>
+
+                {/* Card 4: Frictionless Experience */}
+                <div className="group">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2"
+                    style={{ 
+                      background: 'linear-gradient(to bottom right, rgb(108, 196, 213), rgb(123, 91, 164))'
+                    }}>
+                    <h3 className="text-xl font-bold text-white mb-4">Frictionless Experience</h3>
+                    <p className="text-white/90">No forms. No dashboards. Just chats.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+
          
 
           {/* Target Users Carousel Section */}
@@ -346,16 +269,14 @@ const Index = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <FadeIn delay={0.1}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ready to Ace Your Next Interview?</h2>
-                  <p className="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
-                    Join thousands of job seekers who have transformed their interview performance with GoBot.
-                  </p>
+                 
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                    Let's change how feedback works.<br />
+                    No more forms. No more dashboards. Just real conversations.
+                  </h2>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button className="px-8 py-3 bg-gradient-to-r from-skyBlue to-boldPurple text-white font-medium rounded-lg hover:opacity-90 transition-all shadow-md">
-                      Get Started Free
-                    </button>
-                    <button className="px-8 py-3 bg-white border border-skyBlue/50 text-deepPurple font-medium rounded-lg hover:bg-skyBlue/5 transition-all shadow-sm">
-                      View Demo
+                      Try GoBot (Beta)
                     </button>
                   </div>
                 </FadeIn>
