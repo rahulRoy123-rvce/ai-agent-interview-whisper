@@ -202,7 +202,7 @@ const Index = () => {
 
                 {/* Card 2: Multi-Modal Feedback */}
                 <div className="group">
-                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#6CC3D5] to-[#7A5AA3]">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#6CC3D5]/80 to-[#7A5AA3]/70">
                     <h3 className="text-xl font-bold text-white mb-4">Multi-Modal Feedback</h3>
                     <p className="text-white/90">Capture both words and emotion with voice notes.</p>
                   </div>
@@ -210,7 +210,7 @@ const Index = () => {
 
                 {/* Card 3: Insights, Not Spreadsheets */}
                 <div className="group">
-                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#6CC3D5] to-[#7A5AA3]">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#6CC3D5]/80 to-[#7A5AA3]/70">
                     <h3 className="text-xl font-bold text-white mb-4">Insights, Not Spreadsheets</h3>
                     <p className="text-white/90">Themes, summaries, quotes—automatically delivered.</p>
                   </div>
@@ -218,7 +218,7 @@ const Index = () => {
 
                 {/* Card 4: Frictionless Experience */}
                 <div className="group">
-                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#6CC3D5] to-[#7A5AA3]">
+                  <div className="h-full p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#6CC3D5]/80 to-[#7A5AA3]/70">
                     <h3 className="text-xl font-bold text-white mb-4">Frictionless Experience</h3>
                     <p className="text-white/90">No forms. No dashboards. Just chats.</p>
                   </div>
@@ -231,7 +231,7 @@ const Index = () => {
 
          
 
-          {/* Target Users Carousel Section */}
+          {/* Target Users Section */}
           <section className="py-12 relative">
             <div className="max-w-[1600px] mx-auto px-2">
               <FadeIn delay={0.1}>
@@ -239,47 +239,63 @@ const Index = () => {
                 <p className="text-xl text-[#A28DDA] text-center mb-8">GoBot is built for Entrepreneurs, Brands & Individuals</p>
               </FadeIn>
 
-              <div className="max-w-[1600px] mx-auto">
-                <Carousel
-                  slides={[
-                    {
-                      title: "For Entrepreneurs & Startups",
-                      description: "Validate and test your ideas quickly",
-                      icon: "",
-                      bgClass: "bg-gradient-to-br from-[#6CC3D5] to-[#7A5AA3]",
-                      items: [
-                        "Validate your next big idea in minutes, not weeks.",
-                        "Get honest feedback from potential users—on WhatsApp.",
-                        "Your investor pitch got feedback. Shouldn't your product?",
-                        "Use GoBot to test MVPs, new features, or landing pages with your early adopter community."
-                      ]
-                    },
-                    {
-                      title: "For D2C & Brand Owners",
-                      description: "Get real customer insights",
-                      icon: "",
-                      bgClass: "bg-gradient-to-br from-[#6CC3D5] to-[#7A5AA3]",
-                      items: [
-                        "Launch smarter, not louder.",
-                        "Discover what customers really think—without a survey link.",
-                        "From campaign feedback to product reviews—all inside a chat.",
-                        "Perfect for campaign post-mortems, product sampling responses, or influencer-led market research."
-                      ]
-                    },
-                    {
-                      title: "For Individuals & Creators",
-                      description: "Understand your audience better",
-                      icon: "",
-                      bgClass: "bg-gradient-to-br from-[#6CC3D5] to-[#7A5AA3]",
-                      items: [
-                        "Turn followers into insight engines.",
-                        "Ask, listen, and grow—with zero spreadsheets.",
-                        "Know what your audience wants next—just talk to them.",
-                        "Use GoBot to test content ideas, run community polls, or understand what your audience loves most."
-                      ]
-                    }
-                  ]}
-                />
+              <div className="grid grid-cols-1 md:grid-cols-3 relative z-10 max-w-7xl mx-auto">
+                {[
+                  {
+                    title: " For Entrepreneurs & Startups",
+                    description: "Validate your next big idea in minutes, not weeks.",
+                    items: [
+                      "Get honest feedback from potential users—on WhatsApp.",
+                      "Your investor pitch got feedback. Shouldn't your product?",
+                      "Use GoBot to test MVPs, new features, or landing pages with your early adopter community."
+                    ]
+                  },
+                  {
+                    title: " For D2C & Brand Owners",
+                    description: "Launch smarter, not louder.",
+                    items: [
+                      "Discover what customers really think—without a survey link.",
+                      "From campaign feedback to product reviews—all inside a chat.",
+                      "Perfect for campaign post-mortems, product sampling responses, or influencer-led market research."
+                    ]
+                  },
+                  {
+                    title: " For Individuals & Creators",
+                    description: "Turn followers into insight engines.",
+                    items: [
+                      "Ask, listen, and grow—with zero spreadsheets."
+                      
+                    ]
+                  }
+                ].map((useCase, index) => (
+                  <div
+                    key={useCase.title}
+                    className={`flex flex-col lg:border-r dark:border-neutral-800 py-12 relative group ${
+                      index === 0 && "lg:border-l dark:border-neutral-800"
+                    }`}
+                  >
+                    <div className="opacity-0 group-hover:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+                    <div className="text-xl md:text-2xl font-bold mb-4 relative z-10 px-12">
+                      <div className="absolute left-0 inset-y-0 h-8 group-hover:h-10 w-1.5 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-[#6CC3D5] transition-all duration-200 origin-center" />
+                      <span className="group-hover:translate-x-2 transition duration-200 inline-block text-[#3D2E4F]">
+                        {useCase.title}
+                      </span>
+                    </div>
+                    <div className="px-12 space-y-6">
+                      <p className="text-lg md:text-xl text-[#3D2E4F] font-semibold relative z-10">
+                        {useCase.description}
+                      </p>
+                      <ul className="space-y-4">
+                        {useCase.items.map((item, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <div className="w-2 h-2 rounded-full bg-[#6CC3D5] mt-2 shrink-0"></div>
+                            <p className="text-base md:text-lg text-[#A28DDA] leading-relaxed">{item}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
