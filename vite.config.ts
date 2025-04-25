@@ -19,4 +19,12 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['@tabler/icons-react'],
+  },
+  build: {
+    commonjsOptions: {
+      include: [/@tabler\/icons-react/, /node_modules/],
+    },
+  },
 }));
