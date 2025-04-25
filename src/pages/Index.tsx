@@ -19,6 +19,9 @@ import {
   IconHeadset,
   IconArrowBack,
   IconHeart,
+  IconMessageCircle,
+  IconApps,
+  IconUserCircle
 } from "@tabler/icons-react";
 
 const Index = () => {
@@ -140,17 +143,17 @@ const Index = () => {
                               {
                                 title: "Text and Voice Notes",
                                 description: "Record feedback in any format - text messages or voice recordings for natural conversations.",
-                                icon: <IconMicrophone className="w-8 h-8" />,
+                                icon: <IconMessageCircle className="w-8 h-8" />,
                               },
                               {
                                 title: "Multi-Platform Support",
                                 description: "Works seamlessly across WhatsApp, Email, and Instagram DMs for maximum reach.",
-                                icon: <IconBrandWhatsapp className="w-8 h-8" />,
+                                icon: <IconApps className="w-8 h-8" />,
                               },
                               {
                                 title: "No Login Required",
                                 description: "Zero friction for users - no accounts, no dashboards, just simple conversations.",
-                                icon: <IconLock className="w-8 h-8" />,
+                                icon: <IconUserCircle className="w-8 h-8" />,
                               },
                             ].map((feature, index) => (
                               <div
