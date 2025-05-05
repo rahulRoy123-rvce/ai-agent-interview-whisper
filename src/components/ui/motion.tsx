@@ -98,7 +98,7 @@ type FadeInProps = {
 
 export const FadeIn = ({
   children,
-  className = "",
+  className = "bg-#ffd6a3",
   delay = 0,
   direction = "up",
   duration = 0.5,

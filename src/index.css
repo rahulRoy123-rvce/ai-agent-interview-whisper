@@ -5,57 +5,62 @@
 @layer base {
   /* Using light theme by default with custom colors */
   :root {
-    --background: 0 0% 100%; /* White background */
-    --foreground: 267 25% 25%; /* #3D2E4F Deep Purple Shadow */
+    --background: 240 67% 99%; /* #fbfbfe Very light lavender background */
+    --foreground: 261 47% 45%; /* #5a3dab Purple text - Updated to exact hex */
 
-    --card: 0 0% 100%;
-    --card-foreground: 267 25% 25%;
+    --card: 240 67% 99%;
+    --card-foreground: 261 47% 45%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 267 25% 25%;
+    --popover: 240 67% 99%;
+    --popover-foreground: 261 47% 45%;
 
     /* Primary Colors */
-    --primary: 191 53% 63%; /* #6CC3D5 Sky Blue */
-    --primary-foreground: 267 25% 25%; /* #3D2E4F Deep Purple Shadow */
+    --primary: #5A3DAB; /* #5a3dab Purple - Updated to exact hex */
+    --primary-foreground: 240 67% 99%; /* #fbfbfe Light background */
 
     /* Secondary Colors */
-    --secondary: 39 86% 72%; /* #F5C87A Soft Yellow */
-    --secondary-foreground: 255 53% 85%; /* #A28DDA Muted Violet */
+    --secondary: 35 100% 73%; /* #ffd6a3 Light orange/peach */
+    --secondary-foreground: 261 47% 45%; /* #5a3dab Purple */
 
     /* Muted Colors */
-    --muted: 255 53% 85%; /* #A28DDA Muted Violet */
-    --muted-foreground: 267 25% 25%; /* #3D2E4F Deep Purple Shadow */
+    --muted: 181 70% 47%; /* #23d1c0 Teal but muted */
+    --muted-foreground: 261 47% 45%; /* #5a3dab Purple */
 
     /* Accent Colors */
-    --accent: 267 29% 50%; /* #7A5AA3 Bold Purple */
-    --accent-foreground: 0 0% 100%;
+    --accent: 181 70% 47%; /* #23d1c0 Teal */
+    --accent-foreground: 240 67% 99%;
 
     /* Status Colors */
-    --destructive: 5 71% 59%; /* #E2574C Warm Coral Red */
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 5 71% 59%; /* #E2574C Warm Coral Red (kept for alerts) */
+    --destructive-foreground: 240 67% 99%;
 
-    --success: 153 52% 55%; /* #4FC88F Fresh Mint Green */
-    --success-foreground: 0 0% 100%;
+    --success: 153 52% 55%; /* #4FC88F Fresh Mint Green (kept for success states) */
+    --success-foreground: 240 67% 99%;
 
     /* Border and Input */
-    --border: 267 25% 25%;
-    --input: 267 25% 25%;
-    --ring: 267 29% 50%;
+    --border: 261 47% 45%;
+    --input: 261 47% 45%;
+    --ring: 181 70% 47%;
 
     --radius: 0.5rem;
 
-    /* Success: Mint Green */
-    --success: 153 52% 55%; /* #4FC88F */
-    --success-foreground: 0 0% 100%;
-
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 240 10% 10%;
-    --sidebar-primary: 190 55% 63%; /* Sky Blue */
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 266 28% 50%; /* Bold Purple */
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 190 55% 63%; /* Sky Blue */
+    /* Sidebar styling */
+    --sidebar-background: 240 67% 99%;
+    --sidebar-foreground: 261 47% 45%;
+    --sidebar-primary: 261 47% 45%; /* #5a3dab Purple */
+    --sidebar-primary-foreground: 240 67% 99%;
+    --sidebar-accent: 181 70% 47%; /* Teal */
+    --sidebar-accent-foreground: 240 67% 99%;
+    --sidebar-border: 35 100% 73%; /* Light orange */
+    --sidebar-ring: 181 70% 47%; /* Teal */
+    
+    /* Gradient styles */
+    --linearPrimarySecondary: linear-gradient(hsl(261, 47%, 45%), hsl(33, 100%, 82%));
+    --linearPrimaryAccent: linear-gradient(hsl(261, 47%, 45%), hsl(174, 71%, 48%));
+    --linearSecondaryAccent: linear-gradient(hsl(33, 100%, 82%), hsl(174, 71%, 48%));
+    --radialPrimarySecondary: radial-gradient(hsl(261, 47%, 45%), hsl(33, 100%, 82%));
+    --radialPrimaryAccent: radial-gradient(hsl(261, 47%, 45%), hsl(174, 71%, 48%));
+    --radialSecondaryAccent: radial-gradient(hsl(33, 100%, 82%), hsl(174, 71%, 48%));
   }
 }
 
@@ -113,5 +118,30 @@
   .animate-gradient {
     background-size: 200% 200%;
     animation: gradient 8s ease infinite;
+  }
+  
+  /* Gradient utility classes */
+  .bg-gradient-primary-secondary {
+    background: var(--linearPrimarySecondary);
+  }
+  
+  .bg-gradient-primary-accent {
+    background: var(--linearPrimaryAccent);
+  }
+  
+  .bg-gradient-secondary-accent {
+    background: var(--linearSecondaryAccent);
+  }
+  
+  .bg-radial-primary-secondary {
+    background: var(--radialPrimarySecondary);
+  }
+  
+  .bg-radial-primary-accent {
+    background: var(--radialPrimaryAccent);
+  }
+  
+  .bg-radial-secondary-accent {
+    background: var(--radialSecondaryAccent);
   }
 }
