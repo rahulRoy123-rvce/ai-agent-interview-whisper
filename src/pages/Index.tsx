@@ -52,24 +52,18 @@ const Index = () => {
                   How It Works
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                 </a>
+                
                 <a 
-                  href="#pricing" 
+                  href="#use-case" 
                   className="text-primary hover:text-accent font-medium text-lg px-2 py-1 relative group transition-all duration-300"
                 >
-                  Pricing
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a 
-                  href="#contact" 
-                  className="text-primary hover:text-accent font-medium text-lg px-2 py-1 relative group transition-all duration-300"
-                >
-                  Contact
+                  Use Cases
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                 </a>
               </div>
               
               <div className="flex items-center space-x-6">
-                <button className="hidden md:block px-6 py-2 text-primary hover:text-accent transition-colors font-medium text-lg">Sign In</button>
+                <button className="hidden md:block px-6 py-2 text-primary hover:text-accent transition-colors font-medium text-lg"><a href="#try-now">Try Now</a></button>
                 <button className="px-6 py-2.5 bg-accent text-white font-medium text-lg rounded-lg hover:opacity-90 transition-all shadow-sm">Get Started</button>
                 <MobileMenu />
               </div>
@@ -233,7 +227,7 @@ const Index = () => {
          
 
           {/* Target Users Section */}
-          <section className="py-12 relative">
+          <section id ="use-case" className="py-12 relative">
             <div className="max-w-[1600px] mx-auto px-2">
               <FadeIn delay={0.1}>
                 <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center text-{#5A3DAB}">Use GoBot to</h2>
@@ -302,7 +296,7 @@ const Index = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-12 relative">
+          <section id="try-now" className="py-12 relative">
             <div className="max-w-[1600px] mx-auto px-2">
               <div className="max-w-[800px] mx-auto text-center">
                 <FadeIn delay={0.1}>
