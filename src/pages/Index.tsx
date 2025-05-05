@@ -173,7 +173,7 @@ const Index = () => {
                                     {feature.title}
                                   </span>
                                 </div>
-                                <p className="text-base md:text-lg text-primary/70 max-w-xs relative z-10 px-12 leading-relaxed">
+                                <p className="text-base md:text-lg text-black/70 max-w-xs relative z-10 px-12 leading-relaxed">
                                   {feature.description}
                                 </p>
                               </div>
@@ -278,19 +278,19 @@ const Index = () => {
                     <div className="opacity-0 group-hover:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 to-transparent pointer-events-none" />
                     <div className="text-xl md:text-2xl font-bold mb-4 relative z-10 px-12">
                       <div className="absolute left-0 inset-y-0 h-8 group-hover:h-10 w-1.5 rounded-tr-full rounded-br-full bg-neutral-300 group-hover:bg-accent transition-all duration-200 origin-center" />
-                      <span className="group-hover:translate-x-2 transition duration-200 inline-block text-#5a3da9">
+                      <span className="group-hover:translate-x-2 transition duration-200 inline-block font-bold text-#5a3da9">
                         {useCase.title}
                       </span>
                     </div>
                     <div className="px-12 space-y-6">
-                      <p className="text-lg md:text-xl text-primary font-semibold relative z-10">
+                      <p className="text-lg md:text-xl  font-semibold relative z-10">
                         {useCase.description}
                       </p>
                       <ul className="space-y-4">
                         {useCase.items.map((item, i) => (
                           <li key={i} className="flex items-start gap-3">
-                            <div className="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
-                            <p className="text-base md:text-lg text-primary/70 leading-relaxed">{item}</p>
+                            <div className="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></div>
+                            <p className="text-base md:text-lg text-black/70 leading-relaxed">{item}</p>
                           </li>
                         ))}
                       </ul>
